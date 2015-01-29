@@ -45,4 +45,35 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+})
+
+.controller('UserProfile', function($scope) {
+    $scope.userProfile = [
+        {
+        firstName: "John",
+        lastName: "Doe",
+        pic: "img/userImage.jpg",
+        carMake: "Make",
+        carModel: "Model",
+        carYear: "Year",
+        carMPG: "MPG",
+        carPic: "src"
+    }
+    ];
+})
+
+.controller('TripSettings', function($scope) {
+    $scope.tripInfo = {
+        seatsAvailable: "# of Available Seats",
+        startingLocation: "Starting Location",
+        endingLocation: "Destination",
+        cargoCapacity: "Suitcases?",
+        departureTime: "Start Date",
+        arrivalTime: "Estimated TOA",
+        pricePerSeat: "Money!",
+        returnTrip: "One way?",
+        returnStart: "Coming back on MM/DD/YYYY",
+        returnArrival: "Should be back DATE"
+    }
+})
+;
