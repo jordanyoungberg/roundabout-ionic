@@ -1,5 +1,46 @@
 <ion-view view-title="messages">
   <ion-content>
-    <h1>Messages</h1>
+<!--  message on menu  -->
+ <div class="card" ng-show="true">
+    <div class="list">
+      <a class="item item-avatar" href="#">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h2>Baghavagita - <i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></h2><h5>12/12/15 | 14:55</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+      </a>
+    </div>   
+ </div>
+ 
+<!--on entry-->
+
+<!--  full message  -->
+ <div class="card" ng-show="true">
+    <div class="list">
+      <a class="item item-text-wrap item-avatar" href="#">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h2>{firstname} - {rank}</h2><h5>{datestamp} | {timestamp}</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
+      </a>
+    </div>   
+ </div>
+
+<!--  Your reply       -->
+ <div class="card" ng-show="true">
+      <a class="item item-text-wrap item-avatar-right" href="#">
+      <img src="http://lorempixel.com/200/200/animals/">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati reprehenderit sint ipsa ratione molestiae, dolorum ipsam quidem, eveniet voluptate aperiam quisquam distinctio ut esse. Ratione.</p><h5>{datestamp} | {timestamp}</h5></h5>
+      </a>  
+ </div>
+ 
+ <!--  Their message  -->
+ <div class="card" ng-show="true">
+    <div class="list">
+      <a class="item item-text-wrap item-avatar" href="#">
+      <img src="http://lorempixel.com/200/200/people/">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p><h5>{datestamp} | {timestamp}</h5></h5>
+      </a>
+    </div>   
+ </div>
+ 
   </ion-content>
 </ion-view>

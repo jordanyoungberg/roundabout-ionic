@@ -1,14 +1,81 @@
 <ion-view view-title="Dashboard">
   <ion-content class="has-header">
- <div class="bar bar-header bar-dark">
+<!--
+     <div class="bar bar-header bar-dark">
   <h1 class="title">Profile</h1>
   <button class="button icon ion-gear-a">&nbsp;Edit</button>
     </div>
-
+-->
+<!--
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Header Buttons</h1>
+  <button class="button">Edit</button>
+</div>
+-->
+<!--
+<div class="list card">
     <div class="button-bar">
-  <a class="button">First</a>
-  <a class="button">Second</a>
+  <a class="button button-outline button-energized">Find a ride</a>
+  <a class="button button-outline button-balanced">Post a ride</a>
     </div>
+</div>
+-->
+
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="http://lorempixel.com/200/200/animals/">
+    <h2>{firstname}</h2>
+    <i class="icon ion-star"></i>
+    <i class="icon ion-star"></i>
+    <i class="icon ion-star"></i>
+    <i class="icon ion-star"></i>
+    <i class="icon ion-star"></i>
+  </div>
+  <div class="item">
+      <h2>Stats</h2>
+      <div class="row">
+        <div class="col col-50">
+          <p>Member since {2015} <br>
+              {#} Passenger trips <br>
+              {#} Driver trips <br> </p>
+        </div>
+        <div class="col col-50">
+          <p>{#} Total Miles <br>
+              {#} Money Saved <br>
+              {#} People Met
+          </p>
+        </div>
+      </div>       
+  </div>
+  <div class="item">
+      <h2>About</h2>
+      <div class="row">
+        <div class="col">
+           <p><i class="icon ion-music-note"></i> {music} <br>
+               <i class="icon ion-videocamera"></i> {movies} <br>
+            <i class="icon ion-ios-book"></i> {books} <br>
+          <i class="icon ion-ios-football"></i> {sports} <br> </p>
+        </div>
+      </div>
+  </div>
+   
+    <div class="item item-avatar">
+    <img src="http://lorempixel.com/200/200/transport/">
+     <h2>Driving Info</h2>
+      <div class="row">
+        <div class="col">
+          <p>Talking: {} <br>
+          Music: {} <br>
+          Cargo: {}
+          </p>
+        </div>
+      </div>
+    </div>
+
+</div>
+    
     
   </ion-content>
 </ion-view>

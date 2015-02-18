@@ -1,5 +1,204 @@
-<ion-view view-title="Search">
+<ion-view view-title="Post Ride">
   <ion-content>
-    <h1>Search</h1>
+<!-- These cards should appear as forms when you press "find" or "post" ride buttons  -->
+
+<!--post ride-->
+ <div class="card" ng-show="true">
+    <div class="list">
+     <div class="col">
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Start">
+        <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion-location"></i>
+        </li>
+     </ul>
+      </label>
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Destination">
+      </label>
+      </div>
+    <div class="row">
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Date">
+      </label>    
+     </div>
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Time">
+        </label>
+     </div>
+     <div class="col col-33">
+       <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion ion-arrow-return-left"></i>
+        </li>
+     </ul>
+     </div>
+     </div>
+     <label for="find" class="item item-input">
+        <input type="text" placeholder="Description">
+        </label>
+        
+     <button class="button button-full button-outline button-positive">Post</button>
+     
+    </div>
+ </div>
+  
+<!-- post ride | if return is checked:  -->
+  <div class="card" ng-show="true">
+    <div class="list">
+     <div class="col">
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Start">
+        <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion-location"></i>
+        </li>
+     </ul>
+      </label>
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Destination">
+      </label>
+      </div>
+    <div class="row">
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Date">
+      </label>    
+     </div>
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Time">
+        </label>
+     </div>
+     <div class="col col-33">
+       <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion ion-arrow-return-left"></i>
+        </li>
+     </ul>
+     </div>
+    </div>
+    <hr>
+    
+     <div class="col">
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Start">
+      </label>
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Destination">
+      </label>
+     </div>
+     <div class="row">
+     <div class="col col-50">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Date">
+      </label>    
+     </div>
+     <div class="col col-50">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Time">
+        </label>
+     </div>
+    </div>
+     <label for="find" class="item item-input">
+        <input type="text" placeholder="Description">
+        </label>
+
+     <button class="button button-full button-outline button-balanced">Post</button>
+     
+    </div>
+ </div>
+  
+  
+<!--find ride-->
+  <div class="card" ng-show="true">
+    <div class="list">
+     <div class="col">
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Start">
+        <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion-location"></i>
+        </li>
+     </ul>
+      </label>
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Destination">
+      </label>
+      </div>
+    <div class="row">
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Date">
+      </label>    
+     </div>
+     <div class="col col-33">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Time">
+        </label>
+     </div>
+     <div class="col col-33">
+       <ul class="list">
+        <li class="item item-checkbox">
+         <label class="checkbox">
+         <input type="checkbox">
+        </label>
+     <i class="ion ion-arrow-return-left"></i>
+        </li>
+     </ul>
+     </div>
+    </div>
+    <hr>
+    
+     <div class="col">
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Start">
+      </label>
+      <label for="find" class="item item-input">
+        <input type="text" placeholder="Destination">
+      </label>
+     </div>
+     <div class="row">
+     <div class="col col-50">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Date">
+      </label>    
+     </div>
+     <div class="col col-50">
+        <label for="find" class="item item-input">
+        <input type="text" placeholder="Time">
+        </label>
+     </div>
+    </div>
+    <label for="find" class="item item-input">
+        <input type="text" placeholder="Description">
+        </label>
+    
+     
+
+     <button class="button button-outline button-full button-energized">Post to rideboard</button>
+     
+    </div>
+ </div>
+
   </ion-content>
+  
 </ion-view>
