@@ -1,6 +1,35 @@
 <ion-view view-title="Rideboard">
   <ion-content>
 
+<!--driver-->
+ 
+ <!--  on tap  -->
+ <div class="card" ng-show="true">
+    <div class="list">
+      <div class="row">
+          <div class="col col-80">
+            <a class="item item-text-wrap item-avatar" href="{profile}">
+            <img src="http://lorempixel.com/200/200/people/">
+            <h4>{firstname} - {rank}</h4>
+              <h6>{datestamp} | {timestamp}</h6>
+            <p>{pointA} > {pointB}</p>
+            </a>
+          </div>
+          <div class="col col-20">
+            <h1>$5</h1>
+            <h6>{car}</h6>
+          </div>
+        </div>
+      <div class="item item-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
+      </div>
+    </div>
+</div>
+
+<!--  swipe right to reply-->
+ 
+<!--passenger-->
+
 <div class="card" ng-show="true">
     <div class="list">
       <a class="item item-avatar" href="#">
@@ -10,43 +39,10 @@
       </a>
     </div>   
  </div>
- 
- 
- <!--  on tap  -->
- <div class="card" ng-show="true">
-    <div class="list">
-      <a class="item item-text-wrap item-avatar" href="#">
-      <img src="http://lorempixel.com/200/200/people/">
-        <h2>{firstname} - {rank}</h2><h5>{datestamp} | {timestamp} | {pointA} > {pointB}</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
-      </a>
-    </div>   
- </div>
+  
+  
+  
 
-<!--  swipe right to reply-->
-  
-  
-  
-<div class="card" ng-show="true">
-    <div class="list">
-      <div class="row">
-          <div class="col col-70">
-          <a class="item item-text-wrap item-avatar" href="#">
-          <img src="http://lorempixel.com/200/200/people/">
-            <h2>{firstname} - {rank}</h2>
-              <h5>{datestamp} | {timestamp}</h5>
-            <p>{pointA} > {pointB}</p>
-          </div>
-          <div class="col col-30">
-          <h1>$5</h1>
-          <h5>/seat</h5>
-          </div>
-      </div>
-       <img class="item item-text-wrap item-avatar-right" src="http://lorempixel.com/200/200/animals/">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
-      </a>
-    </div>   
- </div>
   
 
   </ion-content>
