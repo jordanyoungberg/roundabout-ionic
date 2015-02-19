@@ -46,20 +46,7 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('ProfileCtrl', function($scope) {
-    openFB.api({
-        path: '/me',
-        params: {fields: 'id,name'},
-        success: function(user) {
-            $scope.$apply(function() {
-                $scope.user = user;
-            });
-        },
-        error: function(error) {
-            alert('Facebook error: ' + error.error_description);
-        }
-    });
-})
+
 
 .controller('UserProfile', function($scope) {
     $scope.userProfile = [
@@ -90,4 +77,19 @@ angular.module('starter.controllers', [])
         returnArrival: "Should be back DATE"
     }
 })
+
+.controller('ProfileCtrl', function($scope) {
+    openFB.api({
+        path: '/me',
+        params: {fields: 'id,name'},
+        success: function(user) {
+            $scope.$apply(function() {
+                $scope.user = user;
+            });
+        },
+        error: function(error) {
+            alert('Facebook error: ' + error.error_description);
+        }
+    });
+});
 ;
