@@ -21,6 +21,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+  openFB.init({appId: '447832085365144'});
+    
   $stateProvider
 
   .state('app', {
