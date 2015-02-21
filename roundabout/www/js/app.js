@@ -58,15 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
-  .state('app.events', {
-    url: "/events",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/events.html"
-      }
-    }
-  })
+
   
   .state('app.search', {
     url: "/search",
@@ -86,5 +78,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/messages');
+  $urlRouterProvider.otherwise('/app/rideboard');
 });

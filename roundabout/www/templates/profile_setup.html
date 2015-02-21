@@ -1,0 +1,41 @@
+<ion-modal-view>
+  <ion-header-bar>
+             <h1 class="title">Profile Setup</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeGo()">Later</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+
+  <a class="item item-calm item-avatar item-icon-right" href="{edit_profile_photo}">
+    <img src="http://lorempixel.com/200/200/people/">
+    <h2>{firstname}</h2>
+    <h5>{rank}</h5>
+    <i class="icon">{age}</i>
+  </a>
+
+<!--Profile Setup-->
+    <form ng-submit="#">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="About">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Music">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Movies">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Books">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Sports">
+        </label>
+        <button class="button button-block button-outline button-calm">Save</button>
+      </div>
+    </form>
+    
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar>
+             <h1 class="title">Vehicle Setup</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeGo()">Later</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+
+
+  <a class="item item-calm item-avatar item-icon-right" href="{edit_vehicle_photo}">
+    <img src="http://lorempixel.com/200/200/transport/">
+    <h2>{year} {make} {model}</h2>
+    <h5>{seats}, {mpg}</h5>
+    <i class="icon">${seatCost}</i>
+  </a>
+
+<!--Profile Setup-->
+    <form ng-submit="#">
+      <div class="list">
+        <label class="item item-input item-floating-label" ng-show="true">
+            <input type="text" placeholder="Make">
+        </label>
+        <label class="item item-input item-floating-label" ng-show="true">
+            <input type="text" placeholder="Model">
+        </label>
+        <label class="item item-input item-floating-label" ng-show="true">
+            <input type="tel" placeholder="Year">
+        </label>
+        <button class="button button-block button-outline button-calm">Save</button>
+      </div>
+    </form>
+    
+  </ion-content>
+</ion-modal-view>

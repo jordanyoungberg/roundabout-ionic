@@ -1,49 +1,88 @@
 <ion-view view-title="Rideboard">
   <ion-content>
 
-<!--driver-->
- 
- <!--  on tap  -->
- <div class="card" ng-show="true">
-    <div class="list">
-      <div class="row">
-          <div class="col col-80">
-            <a class="item item-text-wrap item-avatar" href="{profile}">
-            <img src="http://lorempixel.com/200/200/people/">
-            <h4>{firstname} - {rank}</h4>
-              <h6>{datestamp} | {timestamp}</h6>
-            <p>{pointA} > {pointB}</p>
-            </a>
-          </div>
-          <div class="col col-20">
-            <h1>$5</h1>
-            <h6>{car}</h6>
-          </div>
-        </div>
-      <div class="item item-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
-      </div>
-    </div>
+<!--This is going to be a subheader for refining search parameters-->
+<!--
+<div class="bar bar-header item-input-insert">
+    <label class="item-input-wrapper">
+    <input type="search" placeholer="Radius">
+    <input type="search" placeholer="Destination">
+    <input type="search" placeholer="Date">
+    </label>
 </div>
+-->
 
-<!--  swipe right to reply-->
+<!--driver-->
+
+<div class="card" ng-show="true">
+      <a class="item item-balanced item-avatar item-icon-right" href="#">
+    <img src="http://lorempixel.com/200/200/people/">
+    <h2>{firstname}{rank}, {age}</h2>
+    <h5>{datestamp} | {timestamp}</h5>
+    <p>{point A} > {point B}</p>
+    <i class="icon">$5</i>
+  </a>
+      <div class="item item body item-text-wrap">
+          <p>Going to Salt Lake City for the weekend for a Lynyrd Skynyrd concert.</p>
+        <br>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a href="{{compose-message}}" class="tab-item">
+              Message <i class="icon ion-email"></i>
+          </a>
+          <a href="{{offer-ride}}" class="tab-item">
+              Request Ride <i class="icon ion-arrow-right-c"></i>
+          </a>
+        </div>
+      </div>
+ </div>
+
  
+
+
 <!--passenger-->
 
 <div class="card" ng-show="true">
-    <div class="list">
-      <a class="item item-avatar" href="#">
-      <img src="http://lorempixel.com/200/200/people/">
-        <h2>Baghavagita - <i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></h2><h5>12/12/15 | 14:55</h5>
-        <p>Cedar City > Salt Lake City</p>
-      </a>
-    </div>   
- </div>
-  
-  
-  
+  <a class="item item-energized item-avatar item-icon-right" href="#">
+    <img src="http://lorempixel.com/200/200/people/">
+    <h2>{firstname}{rank}, {age}</h2>
+    <h5>{datestamp} | {timestamp}</h5>
+    <p>{point A} > {point B}</p>
+    <i class="icon"></i>
+  </a>
+  <div class="item item body item-text-wrap" ng-show="true">
+    <p>Trying to get to Salt Lake this weekend. I heard there's a Lynyrd Skynyrd concert!
+    </p>
+    <br>
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a href="{{compose-message}}" class="tab-item">
+    Message <i class="icon ion-email"></i>
+    </a>
+    <a href="{{offer-ride}}" class="tab-item">
+    Offer Ride <i class="icon ion-arrow-right-c"></i>
+    </a>
+  </div>
+  </div>
+</div>
 
-  
+
+<!--your own post-->
+
+<div class="card" ng-show="true">
+  <a class="item item-calm item-avatar item-icon-right" href="#">
+    <img src="http://lorempixel.com/200/200/people/">
+    <h2>{firstname}{rank}, {age}</h2>
+    <h5>{datestamp} | {timestamp}</h5>
+    <p>{point A} > {point B}</p>
+    <i class="icon">$5</i>
+  </a>
+  <div class="item item body item-text-wrap" ng-show="true">
+    <p>Trying to get to Salt Lake this weekend. I heard there's a Lynyrd Skynyrd concert!
+    </p>
+    <button class="button button-block button-outline button-assertive">Delete post</button>
+  </div>
+</div>
+
+
 
   </ion-content>
   

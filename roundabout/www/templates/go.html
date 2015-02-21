@@ -1,0 +1,33 @@
+<ion-modal-view>
+  <ion-header-bar>
+             <h1 class="title">Go!</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeGo()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  
+<!--Go! Menu-->
+    <form ng-submit="doMap()">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Destination">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="text" placeholder="Start point">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="date" placeholder="Date">
+        </label>
+        <label class="item item-input item-floating-label">
+            <input type="time" placeholder="Time">
+        </label>
+        <div class="button-bar">
+            <a href="{drive}" class="button button-balanced">Drive!</a>
+            <a href="{ride}" class="button button-energized">Ride!</a>
+        </div>
+      </div>
+    </form>
+    
+  </ion-content>
+</ion-modal-view>

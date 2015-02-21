@@ -1,0 +1,31 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">How is the ride?</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+<!--   Rate your drive-->
+    <form ng-submit="doRate()">
+      <div class="list">
+        <label class="item">
+          <div class="button-bar">
+              <a href="{{rateGood}}" class="button button-outline button-calm ion-heart"></a>
+              <a href="{{ratePoor}}" class="button button-outline button-assertive ion-heart-broken"></a>
+          </div>
+        </label>
+      </div>
+    </form>
+    
+    <form ng-submit="doRateBad()" ng-show="true">
+      <div class="list">
+        <label class="item item-input">
+        <input type="text" placeholder="Uh-oh. What's wrong? (this will remain annonymous)" class="item body item-text-wrap">
+        </label>
+        <button class="button button-full button-assertive">Report</button>
+      </div>
+    </form>
+    
+  </ion-content>
+</ion-modal-view>

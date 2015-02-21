@@ -1,17 +1,31 @@
 <ion-modal-view>
   <ion-header-bar>
-    <h1 class="title">Login</h1>
+       <h1 class="title">Login</h1>
     <div class="buttons">
       <button class="button button-clear" ng-click="closeLogin()">Close</button>
     </div>
   </ion-header-bar>
   <ion-content>
+  
+<!--New users-->
     <form ng-submit="doLogin()">
       <div class="list">
         <label class="item">
-          <button class="button button-block button-positive" ng-click="fbLogin()">Log in with Facebook</button>
+         <p>To use this app you must connect with Facebook.</p>
+          <button class="button button-block button-positive icon-left ion-social-facebook" ng-click="fbLogin()"> Connect</button>
         </label>
       </div>
     </form>
+    
+<!--Returning users-->
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item">
+         <p>Welcome Back!</p>
+          <button class="button button-block button-positive icon-left ion-social-facebook" ng-click="fbLogin()">Log in with Facebook</button>
+        </label>
+      </div>
+    </form>
+    
   </ion-content>
 </ion-modal-view>

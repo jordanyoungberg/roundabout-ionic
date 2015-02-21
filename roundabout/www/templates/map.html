@@ -1,5 +1,22 @@
-<ion-view view-title="Map">
+<ion-view view-title="{currentLocation}">
+ <ion-nav-buttons side="right">
+     <button class="button button-assertive" ng-click="openGo">Go!</button>
+ </ion-nav-buttons>
   <ion-content>
-    <h1>Map</h1>
+  <div class="item item body item-text-wrap" ng-show="true">
+    <img src="http://lorempixel.com/500/500/nature/">
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a href="{{compose-message}}" class="tab-item">
+    {distance}mi.
+    </a>
+    <a href="{{offer-ride}}" class="tab-item">
+    ${est-cost}
+    </a>
+  </div>
+  </div>
+  
+  
+  
+  
   </ion-content>
 </ion-view>
