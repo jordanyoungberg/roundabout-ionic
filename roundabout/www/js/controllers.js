@@ -10,16 +10,29 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+    
+  $ionicModal.fromTemplateUrl('templates/go.html', {
+      scope: $scope
+  }).then(function(modal) {
+      $scope.goModal = modal;
+  });
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
 
+  $scope.closeGo = function() {
+      $scope.goModal.hide();
+  }
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
   };
+    
+  $scope.go = function() {
+      $scope.goModal.show();
+  }
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
@@ -31,6 +44,20 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+
+  $scope.goDrive = function() {
+      console.log('Go drive clicked!');
+          $timeout(function() {
+        $scope.closeGo();
+    }, 100);
+  }
+  
+  $scope.goRide = function() {
+      console.log('Go drive clicked!');
+          $timeout(function() {
+        $scope.closeGo();
+    }, 100);
+  }
     
   $scope.fbLogin = function() {
       openFB.login(

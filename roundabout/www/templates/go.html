@@ -11,20 +11,20 @@
     <form ng-submit="doMap()">
       <div class="list">
         <label class="item item-input item-floating-label">
-            <input type="text" placeholder="Destination">
+            <input type="text" placeholder="Destination" ng-bind="#destination">
         </label>
         <label class="item item-input item-floating-label">
-            <input type="text" placeholder="Start point">
+            <input type="text" placeholder="Start point" ng-bind="#startPlace">
         </label>
         <label class="item item-input item-floating-label">
-            <input type="date" placeholder="Date">
+            <input type="date" placeholder="Date" ng-bind="#date">
         </label>
         <label class="item item-input item-floating-label">
-            <input type="time" placeholder="Time">
+            <input type="time" placeholder="Time" ng-bind="#time">
         </label>
         <div class="button-bar">
-            <a href="{drive}" class="button button-balanced">Drive!</a>
-            <a href="{ride}" class="button button-energized">Ride!</a>
+            <a ng-click="goDrive()" class="button button-balanced">Drive!</a>
+            <a ng-click="goRide()" class="button button-energized">Ride!</a>
         </div>
       </div>
     </form>
