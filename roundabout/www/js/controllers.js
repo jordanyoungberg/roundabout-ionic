@@ -75,31 +75,6 @@ angular.module('starter.controllers', [])
 
 
 
-////Look. Jordan taped together controller! ...but it doesn't work.
-//.controller('GoCtrl', function($scope, $ionicModal, $timeout) {
-//  // Form data for the login modal
-//  $scope.loginData = {};
-//
-//  // Create the go modal that we will use later
-//  $ionicModal.fromTemplateUrl('templates/go.html', {
-//    scope: $scope
-//  }).then(function(modal) {
-//    $scope.modal = modal;
-//  });
-//
-//  // Triggered in the go modal to close it
-//  $scope.closeGo = function() {
-//    $scope.modal.hide();
-//  };
-//
-//  // Open the go modal
-//  $scope.go = function() {
-//    $scope.modal.show();
-//  };
-////This is the end of Jordans crappy thing.
-
-
-
 .controller('UserProfile', function($scope) {
     $scope.userProfile = [
         {
@@ -114,6 +89,7 @@ angular.module('starter.controllers', [])
     }
     ];
 })
+
 
 .controller('TripSettings', function($scope) {
     $scope.tripInfo = {
