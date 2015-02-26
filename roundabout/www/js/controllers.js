@@ -106,6 +106,55 @@ angular.module('starter.controllers', [])
     }
 })
 
+.controller('RideboardCtrl', function($scope, $timeout, $ionicScrollDelegate) {
+    $scope.rides = [
+        {
+            firstName:"Richard",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Driver"
+        },
+        {
+            firstName:"Richard",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Passenger"
+        },
+        {
+            firstName:"Richard",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Owner"
+        }
+    ];
+    
+    $scope.toggleRide = function(ride) {
+        if ($scope.isRideShown(ride)) {
+            $scope.shownRide = null;
+        } else {
+            $scope.shownRide = ride;
+        }
+    };
+    $scope.isRideShown = function(ride) {
+        return $scope.shownRide === ride;
+    };
+})
+
 .controller('ProfileCtrl', function($scope) {
     openFB.api({
         path: '/me',

@@ -1,4 +1,4 @@
-<ion-view view-title="Rideboard">
+<ion-view view-title="Rideboard" ng-controller="RideboardCtrl">
   <ion-content>
 
 <!--This is going to be a subheader for refining search parameters-->
@@ -14,16 +14,19 @@
 
 <!--driver-->
     <ion-list>
-        <div class="card" ng-show="true">
-              <a class="item item-balanced item-avatar item-icon-right" href="#">
+       <div class="card" ng-repeat="ride in rides">
+              <a class="item item-balanced item-avatar item-icon-right"
+               ng-click="toggleRide(ride)" 
+               ng-class="{active:
+               isRideShown(ride)}">
             <img src="http://lorempixel.com/200/200/people/">
-            <h2>{firstname}{rank}, {age}</h2>
-            <h5>{datestamp} | {timestamp}</h5>
-            <p>{point A} > {point B}</p>
+            <h2>{{ride.firstName}}{{ride.rank}}, {{ride.age}}</h2>
+            <h5>{{ride.datestamp}} | {{ride.timestamp}}</h5>
+            <p>{{ride.pointA}} > {{ride.pointB}</p>
             <i class="icon">$5</i>
           </a>
-              <div class="item item body item-text-wrap" ng-show="">
-                  <p>Going to Salt Lake City for the weekend for a Lynyrd Skynyrd concert.</p>
+              <div class="item item body item-text-wrap" ng-show="isRideShown(ride)">
+                  <p>{{ride.rideDescription}}</p>
                 <br>
                 <div class="item tabs tabs-secondary tabs-icon-left">
                   <a href="{{compose-message}}" class="tab-item">
