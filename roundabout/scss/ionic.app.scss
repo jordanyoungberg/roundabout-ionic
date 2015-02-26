@@ -13,17 +13,81 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
+
+$font-family-sans-serif:          "Helvetica Neue", "Roboto", sans-serif !default;
+$font-family-light-sans-serif:    "HelveticaNeue-Light", "Roboto-Light", sans-serif-light !default;
+$font-family-serif:               serif !default;
+$font-family-monospace:           monospace !default;
+
+$font-family-base:                $font-family-sans-serif !default;
+$font-size-base:                  14px !default;
+$font-size-large:                 18px !default;
+$font-size-small:                 11px !default;
+
+$line-height-base:                1.428571429 !default; // 20/14
+$line-height-computed:            floor($font-size-base * $line-height-base) !default; // ~20px
+$line-height-large:               1.33 !default;
+$line-height-small:               1.5 !default;
+
+$headings-font-family:            $font-family-base !default;
+$headings-font-weight:            500 !default;
+$headings-line-height:            1.2 !default;
+
+$base-background-color:           #fff !default;
+$base-color:                      #000 !default;
+
+$link-color:                      $positive !default;
+$link-hover-color:                darken($link-color, 15%) !default;
+
+$content-padding:                 10px !default;
+
+$padding-base-vertical:           6px !default;
+$padding-base-horizontal:         12px !default;
+
+$padding-large-vertical:          10px !default;
+$padding-large-horizontal:        16px !default;
+
+$padding-small-vertical:          5px !default;
+$padding-small-horizontal:        10px !default;
+
+$border-radius-base:              4px !default;
+$border-radius-large:             6px !default;
+$border-radius-small:             3px !default;
 */
 
-$light:                           #F4E6C9 !default;
-$stable:                          #EDD7BB !default;
+$light:                           #FCFAF7 !default;
+$stable:                          #F2F0ED !default;
 $positive:                        #387ef5 !default;
-$calm:                            #9DBCC1 !default;
-$balanced:                        #9CAC3A !default;
-$energized:                       #F4D029 !default;
-$assertive:                       #EB5752 !default;
+$calm:                            #7ED0E0 !default;
+$balanced:                        #7AC143 !default;
+$energized:                       #FFE512 !default;
+$assertive:                       #F15D48 !default;
 $royal:                           #886aea !default;
-$dark:                            #5C5B54 !default;
+$dark:                            #5F604B !default;
+
+$font-family-sans-serif:          "Cooper Hewitt" "Helvetica Neue", "Roboto", sans-serif !default;
+//$font-family-light-sans-serif:    "Cooper Hewitt-thin" "HelveticaNeue-Light", "Roboto-Light", sans-serif-light !default;
+
+$font-family-base:                $font-family-sans-serif !default;
+
+$font-size-base:                  18px !default;
+$font-size-large:                 24px !default;
+$font-size-small:                 14px !default;
+
+$line-height-base:                1.275 !default; // 20/14
+$line-height-computed:            floor($font-size-base * $line-height-base) !default; // ~20px
+$line-height-large:               1.25 !default;
+$line-height-small:               1.5 !default;
+
+$headings-font-family:            $font-family-base !default;
+$headings-font-weight:            600 !default;
+$headings-line-height:            1.2 !default;
+
+$base-background-color:           #FCFAF7 !default;
+$base-color:                      #5F604B !default;
+
+$link-color:                      $positive !default;
+$link-hover-color:                darken($link-color, 15%) !default;
 
 
 // The path for our ionicons font files, relative to the built CSS in www/css
