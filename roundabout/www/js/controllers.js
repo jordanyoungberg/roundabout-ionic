@@ -120,6 +120,59 @@ angular.module('starter.controllers', [])
     }
 })
 
+.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+    function initialize() {
+        var start = new google.maps.LatLng(37.675564, -113.068650);
+        var dest = new google.maps.LatLng(40.767817, -111.901645);
+        
+        var mapOptions = {
+            streetViewControl:true,
+            center: start,
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: start,
+            map: map,
+            title: 'Starting location'
+        });
+        
+        var tripRoute = new google.maps.Marker({
+            position: dest,
+            map: map,
+            title: 'Your trip'
+        });
+        
+        var infoWindow = new google.maps.InfoWindow({
+            content:"Your trip"
+        });
+        
+        infoWindow.open(map,marker);
+        
+        $scope.map = map;
+        
+        var directionsService = new google.maps.DirectionsService();
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        
+        var request = {
+            origin: start,
+            destination: dest,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+            }
+        });
+        
+        directionsDisplay.setMap(map);
+    }
+    
+    google.maps.event.addDomListener(window, 'Load', initialize);
+    
+})
+
 .controller('RideboardCtrl', function($scope, $timeout, $ionicScrollDelegate) {
     $scope.rides = [
         {
