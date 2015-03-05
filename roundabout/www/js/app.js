@@ -58,22 +58,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
-  
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
   
   .state('app.rideboard', {
     url: "/rideboard",
     views: {
       'menuContent': {
         templateUrl: "templates/rideboard.html"
+      }
+    }
+  })
+  
+    .state('app.signup', {
+    url: "/signup",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/signup.html"
       }
     }
   });
