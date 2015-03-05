@@ -16,6 +16,12 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
       $scope.goModal = modal;
   });
+    
+  $ionicModal.fromTemplateUrl('templates/car_setup.html', {
+      scope: $scope
+  }).then(function(modal) {
+      $scope.carModal = modal;
+  });
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -25,6 +31,10 @@ angular.module('starter.controllers', [])
   $scope.closeGo = function() {
       $scope.goModal.hide();
   }
+  
+  $scope.closeCar = function() {
+      $scope.carModal.hide();
+  }
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
@@ -32,7 +42,11 @@ angular.module('starter.controllers', [])
     
   $scope.go = function() {
       $scope.goModal.show();
-  }
+  };
+  
+  $scope.car = function() {
+      $scope.carModal.show();
+  };
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
