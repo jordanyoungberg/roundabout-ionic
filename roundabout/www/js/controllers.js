@@ -120,7 +120,7 @@ angular.module('starter.controllers', [])
             rideType: "Driver"
         },
         {
-            firstName:"Richard",
+            firstName:"Sara",
             rank: 5,
             age: "25",
             dateStamp: "3-25-2015",
@@ -131,7 +131,43 @@ angular.module('starter.controllers', [])
             rideType: "Passenger"
         },
         {
+            firstName:"John",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Owner"
+        }
+    ];
+    
+    $scope.myRides = [
+        {
             firstName:"Richard",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Driver"
+        },
+        {
+            firstName:"Sara",
+            rank: 5,
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Passenger"
+        },
+        {
+            firstName:"John",
             rank: 5,
             age: "25",
             dateStamp: "3-25-2015",

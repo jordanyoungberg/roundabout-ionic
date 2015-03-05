@@ -1,6 +1,8 @@
 <ion-view view-title="Rideboard" ng-controller="RideboardCtrl">
   <ion-content>
-
+  <div>
+      <input type="search" ng-model="q" placeholder="Filter results" />
+  </div>
 <!--This is going to be a subheader for refining search parameters-->
 <!--
 <div class="bar bar-header item-input-insert">
@@ -14,14 +16,14 @@
 
 <!--driver-->
     <ion-list>
-       <div class="card" ng-repeat="ride in rides">
+       <div class="card animate-repeat" ng-repeat="ride in rides | filter:q as results">
               <a class="item item-balanced item-avatar item-icon-right"
                ng-click="toggleRide(ride)" 
                ng-class="{active:
                isRideShown(ride)}">
             <img src="http://lorempixel.com/200/200/people/">
-            <h2>{{ride.firstName}}{{ride.rank}}, {{ride.age}}</h2>
-            <h5>{{ride.datestamp}} | {{ride.timestamp}}</h5>
+            <h2>{{ride.firstName}}, {{ride.age}}</h2><i class="ion-star"></i>
+            <h5>{{ride.dateStamp}} | {{ride.timeStamp}}</h5>
             <p>{{ride.pointA}} > {{ride.pointB}}</p>
             <i class="icon">$5</i>
           </a>
@@ -69,21 +71,24 @@
 
 
         <!--your own post-->
-        <div class="card" ng-show="true">
-          <ion-item class="item item-calm item-avatar item-icon-right"
-                ng-click="toggleRide(ride)" 
+        <div class="card" ng-repeat="myRide in myRides | filter:q as results">
+          <a class="item item-calm item-avatar item-icon-right"
+                ng-click="toggleRide(myRide)" 
                 ng-class="{active:
-                isRideShown(ride)}">
-            <img src="http://lorempixel.com/200/200/people/">
-            <h2>{firstname}{rank}, {age}</h2>
+                isRideShown(myRide)}">
+            <img ng-controller="ProfileCtrl" src="http://graph.facebook.com/{{user.id}}/picture">
+            <h2 ng-controller="ProfileCtrl">{{user.first-name}}, {{user.age}}</h2><i class="ion-star" ng-repeat="five"></i>
             <h5>{datestamp} | {timestamp}</h5>
-            <p>{point A} > {point B}</p>
+            <p>{{pointA}} > {{pointB}}</p>
             <i class="icon">$5</i>
-          </a>
-          <div class="item item body item-text-wrap" ng-show="isRideShown(ride)">
+            </a>
+          <div class="item item body item-text-wrap" ng-show="isRideShown(myRide)">
             <p>{{ride.description}}
             </p>
+            <br/>
+            <div>
             <button class="button button-block button-outline button-assertive">Delete post</button>
+            </div>
           </div>
         </div>
 
