@@ -124,7 +124,7 @@ angular.module('starter.controllers', [])
     $scope.rides = [
         {
             firstName:"Richard",
-            rank: 5,
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -136,7 +136,7 @@ angular.module('starter.controllers', [])
         },
         {
             firstName:"Sara",
-            rank: 5,
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -148,7 +148,7 @@ angular.module('starter.controllers', [])
         },
         {
             firstName:"John",
-            rank: 5,
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -160,10 +160,37 @@ angular.module('starter.controllers', [])
         }
     ];
     
-    $scope.myRides = [
+    $scope.passengers = [
         {
             firstName:"Richard",
-            rank: 5,
+            rank: [1,2,3,4,5],
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Driver",
+            price: "$5"            
+        },
+        {
+            firstName:"Sara",
+            rank: [1,2,3,4,5],
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            rideType: "Passenger",
+            price: "$5"
+        }
+    ];
+    
+    $scope.myDrivers = [
+        {
+            firstName:"Richard",
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -175,7 +202,7 @@ angular.module('starter.controllers', [])
         },
         {
             firstName:"Sara",
-            rank: 5,
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -187,7 +214,7 @@ angular.module('starter.controllers', [])
         },
         {
             firstName:"John",
-            rank: 5,
+            rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
@@ -198,6 +225,21 @@ angular.module('starter.controllers', [])
             price: "$5"
         }
     ];
+    
+        $scope.myPassengers = [
+        {
+            firstName:"Richard",
+            rank: [1,2,3,4,5],
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Ontario, CA",
+            rideDescription: "I need to see some cold weather",
+            rideType: "Driver",
+            price: "$5"
+        }
+        ];
     
     $scope.toggleRide = function(ride) {
         if ($scope.isRideShown(ride)) {

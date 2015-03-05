@@ -1,7 +1,7 @@
 <ion-view view-title="Rideboard" ng-controller="RideboardCtrl">
   <ion-content>
   <div>
-      <input type="search" ng-model="q" placeholder="Filter results" />
+      <input type="search" ng-model="q" placeholder="Filter results" /><label class="toggle toggle-assertive"><input type="checkbox" ng-model="driverRider"><div class="track"><div class="handle"></div></div></label>
   </div>
 <!--This is going to be a subheader for refining search parameters-->
 <!--
@@ -16,13 +16,14 @@
 
 <!--driver-->
     <ion-list>
+      <div ng-hide="driverRider">
        <div class="card animate-repeat" ng-repeat="ride in rides | filter:q as results">
               <a class="item item-balanced item-avatar item-icon-right"
                ng-click="toggleRide(ride)" 
                ng-class="{active:
                isRideShown(ride)}">
             <img src="http://lorempixel.com/200/200/people/">
-            <h2>{{ride.firstName}}, {{ride.age}}</h2><i class="ion-star"></i>
+            <h2>{{ride.firstName}}, {{ride.age}}</h2><i class="ion-star" ng-repeat="n in ride.rank"></i>
             <h5>{{ride.dateStamp}} | {{ride.timeStamp}}</h5>
             <p>{{ride.pointA}} > {{ride.pointB}}</p>
             <i class="icon">{{ride.price}}</i>
@@ -40,22 +41,44 @@
                 </div>
               </div>
          </div>
-
-
+        <!--your own post-->
+        <div class="card animate-repeat" ng-repeat="myDriver in myDrivers | filter:q as results">
+          <a class="item item-calm item-avatar item-icon-right"
+                ng-click="toggleRide(myDriver)" 
+                ng-class="{active:
+                isRideShown(myDriver)}">
+            <img ng-controller="ProfileCtrl" src="http://graph.facebook.com/{{user.id}}/picture">
+            <h2 ng-controller="ProfileCtrl">{{user.name}}, 23</h2><i class="ion-star" ng-repeat="n in myDriver.rank"></i>
+            <h5>{{myDriver.dateStamp}} | {{myDriver.timeStamp}}</h5>
+            <p>{{myDriver.pointA}} > {{myDriver.pointB}}</p>
+            <i class="icon">{{myDriver.price}}</i>
+            </a>
+          <div class="item item body item-text-wrap" ng-show="isRideShown(myDriver)">
+            <p>{{myDriver.description}}
+            </p>
+            <br/>
+            <div>
+            <button class="button button-block button-outline button-assertive">Delete post</button>
+            </div>
+          </div>
+        </div>
+        </div>
 
 
         <!--passenger-->
-
-        <div class="card" ng-repeat="passenger in passengers | filter:q as results">
-          <a class="item item-energized item-avatar item-icon-right" href="#">
+<div ng-show="driverRider">
+        <div class="card animate-repeat" ng-repeat="passenger in passengers | filter:q as results">
+          <a class="item item-energized item-avatar item-icon-right" ng-click="toggleRide(passenger)" 
+                ng-class="{active:
+                isRideShown(passenger)}">
             <img src="http://lorempixel.com/200/200/people/">
-            <h2>{firstname}{rank}, {age}</h2>
-            <h5>{datestamp} | {timestamp}</h5>
-            <p>{point A} > {point B}</p>
+            <h2>{{passenger.firstName}}, {age}</h2><i class="ion-star" ng-repeat="n in passenger.rank"></i>
+            <h5>{{passenger.dateStamp}} | {{passenger.timeStamp}}</h5>
+            <p>{{passenger.pointA}} > {{passenger.pointB}}</p>
             <i class="icon"></i>
           </a>
-          <div class="item item body item-text-wrap" ng-show="">
-            <p>Trying to get to Salt Lake this weekend. I heard there's a Lynyrd Skynyrd concert!
+          <div class="item item body item-text-wrap" ng-show="isRideShown(passenger)">
+            <p>{{passenger.description}}
             </p>
             <br>
           <div class="item tabs tabs-secondary tabs-icon-left">
@@ -69,21 +92,20 @@
           </div>
         </div>
 
-
-        <!--your own post-->
-        <div class="card animate-repeat" ng-repeat="myRide in myRides | filter:q as results">
+<!--        Own Passenger Posts-->
+        <div class="card animate-repeat" ng-repeat="myPassenger in myPassengers | filter:q as results">
           <a class="item item-calm item-avatar item-icon-right"
-                ng-click="toggleRide(myRide)" 
+                ng-click="toggleRide(myPassenger)" 
                 ng-class="{active:
-                isRideShown(myRide)}">
+                isRideShown(myPassenger)}">
             <img ng-controller="ProfileCtrl" src="http://graph.facebook.com/{{user.id}}/picture">
-            <h2 ng-controller="ProfileCtrl">{{user.name}}, 23</h2><i class="ion-star"></i>
-            <h5>{{myRide.dateStamp}} | {{myRide.timeStamp}}</h5>
-            <p>{{myRide.pointA}} > {{myRide.pointB}}</p>
-            <i class="icon">{{myRide.price}}</i>
+            <h2 ng-controller="ProfileCtrl">{{user.name}}, 23</h2><i class="ion-star" ng-repeat="n in myPassenger.rank"></i>
+            <h5>{{myPassenger.dateStamp}} | {{myPassenger.timeStamp}}</h5>
+            <p>{{myPassenger.pointA}} > {{myPassenger.pointB}}</p>
+            <i class="icon">{{myPassenger.price}}</i>
             </a>
-          <div class="item item body item-text-wrap" ng-show="isRideShown(myRide)">
-            <p>{{ride.description}}
+          <div class="item item body item-text-wrap" ng-show="isRideShown(myPassenger)">
+            <p>{{myPassenger.description}}
             </p>
             <br/>
             <div>
@@ -91,9 +113,12 @@
             </div>
           </div>
         </div>
+        </div>
         <div class="animate-repeat" ng-if="results.length == 0">
             <h2>No results..</h2>
         </div>
+        
+
 
       </ion-list>
 
