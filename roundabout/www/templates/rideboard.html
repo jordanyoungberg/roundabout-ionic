@@ -25,7 +25,7 @@
             <h2>{{ride.firstName}}, {{ride.age}}</h2><i class="ion-star"></i>
             <h5>{{ride.dateStamp}} | {{ride.timeStamp}}</h5>
             <p>{{ride.pointA}} > {{ride.pointB}}</p>
-            <i class="icon">$5</i>
+            <i class="icon">{{ride.price}}</i>
           </a>
               <div class="item item body item-text-wrap" ng-show="isRideShown(ride)">
                   <p>{{ride.rideDescription}}</p>
@@ -46,7 +46,7 @@
 
         <!--passenger-->
 
-        <div class="card" ng-show="true">
+        <div class="card" ng-repeat="passenger in passengers | filter:q as results">
           <a class="item item-energized item-avatar item-icon-right" href="#">
             <img src="http://lorempixel.com/200/200/people/">
             <h2>{firstname}{rank}, {age}</h2>
@@ -71,16 +71,16 @@
 
 
         <!--your own post-->
-        <div class="card" ng-repeat="myRide in myRides | filter:q as results">
+        <div class="card animate-repeat" ng-repeat="myRide in myRides | filter:q as results">
           <a class="item item-calm item-avatar item-icon-right"
                 ng-click="toggleRide(myRide)" 
                 ng-class="{active:
                 isRideShown(myRide)}">
             <img ng-controller="ProfileCtrl" src="http://graph.facebook.com/{{user.id}}/picture">
-            <h2 ng-controller="ProfileCtrl">{{user.name}}, {{user.age}}</h2><i class="ion-star" ng-repeat="five"></i>
-            <h5>{datestamp} | {timestamp}</h5>
-            <p>{{pointA}} > {{pointB}}</p>
-            <i class="icon">$5</i>
+            <h2 ng-controller="ProfileCtrl">{{user.name}}, 23</h2><i class="ion-star"></i>
+            <h5>{{myRide.dateStamp}} | {{myRide.timeStamp}}</h5>
+            <p>{{myRide.pointA}} > {{myRide.pointB}}</p>
+            <i class="icon">{{myRide.price}}</i>
             </a>
           <div class="item item body item-text-wrap" ng-show="isRideShown(myRide)">
             <p>{{ride.description}}
@@ -90,6 +90,9 @@
             <button class="button button-block button-outline button-assertive">Delete post</button>
             </div>
           </div>
+        </div>
+        <div class="animate-repeat" ng-if="results.length == 0">
+            <h2>No results..</h2>
         </div>
 
       </ion-list>

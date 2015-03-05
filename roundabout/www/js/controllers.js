@@ -131,7 +131,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Driver"
+            rideType: "Driver",
+            price: "$5"            
         },
         {
             firstName:"Sara",
@@ -142,7 +143,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Passenger"
+            rideType: "Passenger",
+            price: "$5"
         },
         {
             firstName:"John",
@@ -153,7 +155,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Owner"
+            rideType: "Owner",
+            price: "$5"
         }
     ];
     
@@ -167,7 +170,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Driver"
+            rideType: "Driver",
+            price: "$5"
         },
         {
             firstName:"Sara",
@@ -178,7 +182,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Passenger"
+            rideType: "Passenger",
+            price: "$5"
         },
         {
             firstName:"John",
@@ -189,7 +194,8 @@ angular.module('starter.controllers', [])
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
             rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Owner"
+            rideType: "Owner",
+            price: "$5"
         }
     ];
     
