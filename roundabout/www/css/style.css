@@ -85,6 +85,10 @@ p {
     height: 100%;
 }
 
+.angular-google-map-container {
+    height: 400px;
+}
+
 mapDiv {
     height: 300px;
 }

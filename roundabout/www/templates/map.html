@@ -3,13 +3,13 @@
      <button class="button button-assertive" ng-click="go()">Go!</button>
  </ion-nav-buttons>
   <ion-content>
-  <div class="item item body item-text-wrap" ng-show="true" ng-controller="MapCtrl">
-    <div id="map"  data-tap-disabled="true"></div>
+  <div class="item item body item-text-wrap" ng-show="true">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
   <div class="item tabs tabs-secondary tabs-icon-left">
-    <a href="{{compose-message}}" class="tab-item">
+    <a class="tab-item">
     {distance}mi.
     </a>
-    <a href="{{offer-ride}}" class="tab-item">
+    <a class="tab-item">
     ${est-cost}
     </a>
   </div>
