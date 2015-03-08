@@ -1,6 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
-
-
+angular.module('starter.controllers', ['ionic'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
@@ -49,8 +47,6 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
   $scope.car = function() {
       $scope.carModal.show();
   };
-    
-  $scope.map = { center: { latitude: 45, longitude: - 73 }, zoom: 8 };
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
