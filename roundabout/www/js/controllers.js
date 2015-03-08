@@ -78,17 +78,14 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
   }
     
   $scope.fbLogin = function() {
-      openFB.login(
-      function(response) {
-          if (response.status === 'connected') {
-              console.log('Facebook login succeeded');
-              $scope.closeLogin();
-          } else {
-              alert('Facebook login failed');
-          }
-      },
-          {scope: 'email,publish_actions'});
-  }
+      openFB.login('email',
+                function() {
+                    alert('Facebook login succeeded');
+                },
+                function(error) {
+                    alert('Facebook login failed: ' + error.error_description);
+                });
+    }
 })
 
 
