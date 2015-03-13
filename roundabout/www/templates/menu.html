@@ -18,26 +18,38 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item nav-clear menu-close ng-click="login()">
+        <ion-item nav-clear menu-close item-icon-left ng-click="login()">
+         <i class="icon ion-log-in"></i>
           Login
         </ion-item>
-        <ion-item nav-clear menu-close ng-click="rate()">
+        <ion-item nav-clear menu-close item-icon-left ng-click="rate()">
+         <i class="icon ion-heart"></i>
           Rate
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/dashboard">
+        <ion-item nav-clear menu-close item-icon-left href="#/app/dashboard">
+         <i class="icon ion-speedometer"></i>
           Dashboard
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/messages">
+        <ion-item nav-clear menu-close item-icon-left item-icon-right href="#/app/messages">
+          <i class="icon ion-chatboxes"></i>
           Messages
+          <span class="badge badge-assertive">new!</span>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/map">
+        <ion-item nav-clear menu-close item-icon-left href="#/app/map">
+          <i class="icon ion-compass"></i>
           Go!
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/rideboard">
+        <ion-item nav-clear menu-close item-icon-left href="#/app/rideboard">
+         <i class="icon ion-flag"></i>
           Rideboard
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/signup">
+        <ion-item nav-clear menu-close item-icon-left href="#/app/signup">
+          <i class="icon ion-clipboard"></i>
           Signup
+        </ion-item>
+        <ion-item nav-clear menu-close item-icon-left href="#/app/signup">
+          <i class="icon ion-information-circled"></i>
+          How it Works
         </ion-item>
       </ion-list>
     </ion-content>

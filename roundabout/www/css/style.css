@@ -92,3 +92,20 @@ p {
 mapDiv {
     height: 300px;
 }
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/*rideboard toggle*/
+.toggle-balanced .track-balanced {
+  border: solid 2px #7AC143;
+  background-color: #7AC143;}
