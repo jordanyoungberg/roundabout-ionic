@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
+angular.module('starter.controllers', ['ionic'])
 
 
 
@@ -19,6 +19,11 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
       $scope.goModal = modal;
   });
     
+	$ionicModal.fromTemplateUrl('templates/rate.html', {
+      scope: $scope
+  }).then(function(modal) {
+      $scope.rateModal = modal;
+  });
   $ionicModal.fromTemplateUrl('templates/car_setup.html', {
       scope: $scope
   }).then(function(modal) {
@@ -29,17 +34,25 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
+	
+	$scope.closeRate = function() {
+    $scope.rateModal.hide();
+  };
 
   $scope.closeGo = function() {
       $scope.goModal.hide();
-  }
+  };
   
   $scope.closeCar = function() {
       $scope.carModal.hide();
-  }
+  };
   // Open the login modal
   $scope.login = function() {
     $scope.modal.show();
+  };
+	
+	$scope.rate = function() {
+    $scope.rateModal.show();
   };
     
   $scope.go = function() {
@@ -121,6 +134,7 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
     }
 })
 
+/*
 .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
 
     $scope.init = function() {
@@ -178,6 +192,33 @@ angular.module('starter.controllers', ['ionic', 'uiGmapgoogle-maps'])
     $scope.clickTest = function() {
         alert('Example of infowindow with ng-click')
     };
+})
+*/
+
+.controller('MapCtrl', function($scope, $ionicLoading) {
+  $scope.mapCreated = function(map) {
+    $scope.map = map;
+  };
+
+  $scope.centerOnMe = function () {
+    console.log("Centering");
+    if (!$scope.map) {
+      return;
+    }
+
+    $scope.loading = $ionicLoading.show({
+      content: 'Getting current location...',
+      showBackdrop: false
+    });
+
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      console.log('Got pos', pos);
+      $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+      $scope.loading.hide();
+    }, function (error) {
+      alert('Unable to get location: ' + error.message);
+    });
+  };
 })
 
 .controller('RideboardCtrl', function($scope, $timeout, $ionicScrollDelegate) {

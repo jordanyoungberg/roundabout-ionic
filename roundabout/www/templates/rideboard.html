@@ -39,10 +39,10 @@
                   <p>{{ride.rideDescription}}</p>
                 <br>
                 <div class="item tabs tabs-secondary tabs-icon-left">
-                  <a href="{{compose-message}}" class="tab-item">
+                  <a href="" class="tab-item">
                       Message <i class="icon ion-email"></i>
                   </a>
-                  <a href="{{offer-ride}}" class="tab-item">
+                  <a href="" class="tab-item">
                       Request Ride <i class="icon ion-arrow-right-c"></i>
                   </a>
                 </div>
@@ -89,10 +89,10 @@
             </p>
             <br>
           <div class="item tabs tabs-secondary tabs-icon-left">
-            <a href="{{compose-message}}" class="tab-item">
+            <a href="" class="tab-item">
             Message <i class="icon ion-email"></i>
             </a>
-            <a href="{{offer-ride}}" class="tab-item">
+            <a href="" class="tab-item">
             Offer Ride <i class="icon ion-arrow-right-c"></i>
             </a>
           </div>
@@ -109,7 +109,7 @@
             <h2 ng-controller="ProfileCtrl">{{user.name}}, 23</h2><i class="ion-star" ng-repeat="n in myPassenger.rank"></i>
             <h5>{{myPassenger.dateStamp}} | {{myPassenger.timeStamp}}</h5>
             <p>{{myPassenger.pointA}} > {{myPassenger.pointB}}</p>
-            <i class="icon">{{myPassenger.price}}</i>
+            <i class="icon"></i>
             </a>
           <div class="item item body item-text-wrap" ng-show="isRideShown(myPassenger)">
             <p>{{myPassenger.description}}
@@ -124,6 +124,7 @@
         <div class="animate-repeat" ng-if="results.length == 0">
             <h5>No results, please try again.</h5>
         </div>
+        
         
 
 

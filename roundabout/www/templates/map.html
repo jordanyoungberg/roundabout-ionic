@@ -4,7 +4,7 @@
  </ion-nav-buttons>
   <ion-content>
   <div class="item item body item-text-wrap" ng-show="true">
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    <map on-create="mapCreated(map)" class="map"></map>
   <div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item">
     {distance}mi.

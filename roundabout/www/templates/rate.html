@@ -2,7 +2,7 @@
   <ion-header-bar>
     <h1 class="title">How is the ride?</h1>
     <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+      <button class="button button-clear" ng-click="closeRate()">Close</button>
     </div>
   </ion-header-bar>
   <ion-content>
@@ -23,7 +23,7 @@
         <label class="item item-input">
         <input type="text" placeholder="Uh-oh. What's wrong? (this will remain annonymous)" class="item body item-text-wrap">
         </label>
-        <button class="button button-full button-assertive">Report</button>
+        <button class="button button-full button-assertive" ng-click="closeRate()">Report</button>
       </div>
     </form>
     
