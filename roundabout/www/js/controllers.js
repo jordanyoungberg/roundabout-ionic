@@ -236,7 +236,7 @@ angular.module('starter.controllers', ['ionic'])
         {
             firstName:"Richard",
             rank: [1,2,3,4,5],
-            age: "25",
+            age: "21",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
             pointA: "Cedar City, UT",
@@ -260,7 +260,7 @@ angular.module('starter.controllers', ['ionic'])
         {
             firstName:"John",
             rank: [1,2,3,4,5],
-            age: "25",
+            age: "28",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
             pointA: "Cedar City, UT",
@@ -273,14 +273,14 @@ angular.module('starter.controllers', ['ionic'])
     
     $scope.passengers = [
         {
-            firstName:"Richard",
+            firstName:"Joan",
             rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            pointA: "Salt Lake City, UT",
+            pointB: "Cedar City, UT",
+            rideDescription: "I want to visit my long-distance boyfriend.",
             rideType: "Driver",
             price: "$5"            
         },
@@ -290,9 +290,9 @@ angular.module('starter.controllers', ['ionic'])
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            pointA: "Salt Lake City, UT",
+            pointB: "Cedar City, UT",
+            rideDescription: "I have friends at SUU.",
             rideType: "Passenger",
             price: "$5"
         }
@@ -300,53 +300,29 @@ angular.module('starter.controllers', ['ionic'])
     
     $scope.myDrivers = [
         {
-            firstName:"Richard",
+            firstName:"Me",
             rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
             pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
+            pointB: "Orem, UT",
+            rideDescription: "Visiting my UVU friends.",
             rideType: "Driver",
-            price: "$5"
-        },
-        {
-            firstName:"Sara",
-            rank: [1,2,3,4,5],
-            age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Passenger",
-            price: "$5"
-        },
-        {
-            firstName:"John",
-            rank: [1,2,3,4,5],
-            age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Owner",
             price: "$5"
         }
     ];
     
         $scope.myPassengers = [
         {
-            firstName:"Richard",
+            firstName:"Me",
             rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
             pointA: "Cedar City, UT",
-            pointB: "Ontario, CA",
-            rideDescription: "I need to see some cold weather",
+            pointB: "Los Angeles, CA",
+            rideDescription: "I want to visit my sister!",
             rideType: "Driver",
             price: "$5"
         }

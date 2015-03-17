@@ -79,13 +79,13 @@
                 ng-class="{active:
                 isRideShown(passenger)}">
             <img src="http://lorempixel.com/200/200/people/">
-            <h2>{{passenger.firstName}}, {age}</h2><i class="ion-star" ng-repeat="n in passenger.rank"></i>
+            <h2>{{passenger.firstName}}, {{passenger.age}}</h2><i class="ion-star" ng-repeat="n in passenger.rank"></i>
             <h5>{{passenger.dateStamp}} | {{passenger.timeStamp}}</h5>
             <p>{{passenger.pointA}} > {{passenger.pointB}}</p>
             <i class="icon"></i>
           </a>
           <div class="item item body item-text-wrap" ng-show="isRideShown(passenger)">
-            <p>{{passenger.description}}
+            <p>{{passenger.rideDescription}}
             </p>
             <br>
           <div class="item tabs tabs-secondary tabs-icon-left">
@@ -112,7 +112,7 @@
             <i class="icon"></i>
             </a>
           <div class="item item body item-text-wrap" ng-show="isRideShown(myPassenger)">
-            <p>{{myPassenger.description}}
+            <p>{{myPassenger.rideDescription}}
             </p>
             <br/>
             <div>
