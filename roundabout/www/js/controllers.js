@@ -62,6 +62,16 @@ angular.module('starter.controllers', ['ionic'])
   $scope.car = function() {
       $scope.carModal.show();
   };
+	
+	$scope.badNews = false;
+	
+	$scope.toggleBadNews = function () {
+		if ($scope.badNews===false) {
+			$scope.badNews = true;
+		} else {
+			$scope.badNews = false;
+		}
+	};
     
   $scope.map = { center: { latitude: 45, longitude: - 73 }, zoom: 8 };
 

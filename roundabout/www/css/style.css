@@ -105,6 +105,10 @@ mapDiv {
     text-align: center;
 }
 
+.increased-padding {
+	padding-top: 5px;
+}
+
 /*rideboard toggle*/
 .toggle-balanced .track-balanced {
   border: solid 2px #7AC143;

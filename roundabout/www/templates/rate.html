@@ -7,18 +7,19 @@
   </ion-header-bar>
   <ion-content>
 <!--   Rate your drive-->
-    <form ng-submit="doRate()">
-      <div class="list">
-        <label class="item">
-          <div class="button-bar">
-              <a href="{{rateGood}}" class="button button-outline button-calm ion-heart"></a>
-              <a href="{{ratePoor}}" class="button button-outline button-assertive ion-heart-broken"></a>
-          </div>
-        </label>
+     <div class="card">
+      <!-- <div class="list"> -->
+        <!-- <label class="item"> -->
+          <div class="button-bar increased-padding">
+						<button ng-click="closeRate()" class="button button-outline button-calm ion-heart"></button>
+              <button ng-click="toggleBadNews()" class="button button-outline button-assertive ion-heart-broken"></button>
+              
+          <!-- </div> -->
+        <!-- </label> -->
       </div>
-    </form>
+		
     
-    <form ng-submit="doRateBad()" ng-show="true">
+    <form ng-submit="doRateBad()" ng-show="badNews">
       <div class="list">
         <label class="item item-input">
         <input type="text" placeholder="Uh-oh. What's wrong? (this will remain annonymous)" class="item body item-text-wrap">
@@ -26,6 +27,6 @@
         <button class="button button-full button-assertive" ng-click="closeRate()">Report</button>
       </div>
     </form>
-    
+    </div>
   </ion-content>
 </ion-modal-view>
