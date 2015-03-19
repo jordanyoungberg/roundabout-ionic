@@ -1,12 +1,42 @@
 <ion-view view-title="Messages">
-  <ion-content>
+  <ion-content ng-controller="RideboardCtrl">
 <!--  message on menu  -->
- <div class="card" ng-show="true">
+<div class="card">
     <div class="list">
-      <a class="item item-avatar" href="#">
+      <a ng-click="toggleMessage(1)" class="item item-text-wrap item-avatar" href="">
       <img src="http://lorempixel.com/200/200/people/">
-        <h2>Baghavagita - <i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></h2><h5>12/12/15 | 14:55</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur...</p>
+        <h2>{{messageTwo[0].firstName}} - <i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></h2><h5>{{messageTwo[0].dateStamp}} | {{messageTwo[0].timeStamp}}</h5>
+        <p>{{messageTwo[0].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(1)" class="item item-text-wrap item-avatar-right" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageTwo[1].dateStamp}} | {{messageTwo[1].timeStamp}}</h5>
+        <p>{{messageTwo[1].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(1)" class="item item-text-wrap item-avatar" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageTwo[2].dateStamp}} | {{messageTwo[2].timeStamp}}</h5>
+        <p>{{messageTwo[2].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(1)" class="item item-text-wrap item-avatar-right" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageTwo[3].dateStamp}} | {{messageTwo[3].timeStamp}}</h5>
+        <p>{{messageTwo[3].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(1)" class="item item-text-wrap item-avatar" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageTwo[4].dateStamp}} | {{messageTwo[4].timeStamp}}</h5>
+        <p>{{messageTwo[4].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(1)" class="item item-text-wrap item-avatar-right" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageTwo[5].dateStamp}} | {{messageTwo[5].timeStamp}}</h5>
+        <p>{{messageTwo[5].message}}</p>
       </a>
     </div>   
  </div>
@@ -14,30 +44,30 @@
 <!--on entry-->
 
 <!--  full message  -->
- <div class="card" ng-show="true">
+ <div class="card">
     <div class="list">
-      <a class="item item-text-wrap item-avatar" href="#">
+      <a ng-click="toggleMessage(2)" class="item item-text-wrap item-avatar" href="">
       <img src="http://lorempixel.com/200/200/people/">
-        <h2>{firstname} - {rank}</h2><h5>{datestamp} | {timestamp}</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p>
+        <h2>{{messageOne[0].firstName}} - <i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i><i class="icon ion-star"></i></h2><h5>{{messageOne[0].dateStamp}} | {{messageOne[0].timeStamp}}</h5>
+        <p>{{messageOne[0].message}}</p>
       </a>
-    </div>   
- </div>
-
-<!--  Your reply       -->
- <div class="card" ng-show="true">
-      <a class="item item-text-wrap item-avatar-right" href="#">
-      <img src="http://lorempixel.com/200/200/animals/">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati reprehenderit sint ipsa ratione molestiae, dolorum ipsam quidem, eveniet voluptate aperiam quisquam distinctio ut esse. Ratione.</p><h5>{datestamp} | {timestamp}</h5></h5>
-      </a>  
- </div>
- 
- <!--  Their message  -->
- <div class="card" ng-show="true">
-    <div class="list">
-      <a class="item item-text-wrap item-avatar" href="#">
+      
+      <a ng-show="isMessageShown(2)" class="item item-text-wrap item-avatar-right" href="">
       <img src="http://lorempixel.com/200/200/people/">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolor magnam corrupti libero nemo atque provident rem natus saepe, sit, similique aliquam quod enim fuga.</p><h5>{datestamp} | {timestamp}</h5></h5>
+        <h5>{{messageOne[1].dateStamp}} | {{messageOne[1].timeStamp}}</h5>
+        <p>{{messageOne[1].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(2)" class="item item-text-wrap item-avatar" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageOne[2].dateStamp}} | {{messageOne[2].timeStamp}}</h5>
+        <p>{{messageOne[2].message}}</p>
+      </a>
+      
+      <a ng-show="isMessageShown(2)" class="item item-text-wrap item-avatar-right" href="">
+      <img src="http://lorempixel.com/200/200/people/">
+        <h5>{{messageOne[3].dateStamp}} | {{messageOne[3].timeStamp}}</h5>
+        <p>{{messageOne[3].message}}</p>
       </a>
     </div>   
  </div>

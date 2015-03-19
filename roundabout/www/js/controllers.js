@@ -327,6 +327,89 @@ angular.module('starter.controllers', ['ionic'])
             price: "$5"
         }
         ];
+	
+			$scope.messageOne = [
+				{
+					firstName: "Paul",
+					message: "I see you're going to Salt Lake.",
+					timeStamp: "3:15pm",
+					dateStamp: "3.7.15"
+				},
+				{
+					firstName: "John",
+					message: "That's the plan!",
+					timeStamp: "3:23pm",
+					dateStamp: "3.7.15"
+				},
+				{
+					firstName: "Paul",
+					message: "Cool. Mind if I tag along?",
+					timeStamp: "3:30pm",
+					dateStamp: "3.7.15"
+				},
+				{
+					firstName: "John",
+					message: "Sure. As long as we don't have to listen to Skrillex. Just hit the ride request, and I'll accept it.",
+					timeStamp: "4:00pm",
+					dateStamp: "3.7.15"
+				}
+			];
+	
+		$scope.messageTwo = [
+			{
+				firstName: "Doug",
+				message: "Hi. You leaving Salt Lake at 3?",
+					timeStamp: "1:15pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "John",
+				message: "That's the plan. Gotta see the old lady.",
+					timeStamp: "1:18pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "Doug",
+				message: "Awesome. My girlfriend and I are wanting to go to draper to see the sharks",
+					timeStamp: "1:30pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "John",
+				message: "Sure, just have her request a ride, too.",
+					timeStamp: "1:40pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "Doug",
+				message: "Thanks, man!",
+					timeStamp: "2:08pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "John",
+				message: "Can you get to the University? We're all going to meet in the parking lot by the Library at 3pm.",
+					timeStamp: "2:16pm",
+					dateStamp: "3.14.15"
+			},
+			{
+				firstName: "Doug",
+				message: "Sure, see you then.",
+					timeStamp: "2:30pm",
+					dateStamp: "3.14.15"
+			}
+		];
+	
+		$scope.toggleMessage = function(msgNum) {
+        if ($scope.isMessageShown(msgNum)) {
+            $scope.shownMessage = null;
+        } else {
+            $scope.shownMessage = msgNum;
+        }
+    };
+    $scope.isMessageShown = function(msgNum) {
+        return $scope.shownMessage === msgNum;
+    };
     
     $scope.toggleRide = function(ride) {
         if ($scope.isRideShown(ride)) {
