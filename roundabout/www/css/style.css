@@ -2,72 +2,72 @@
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Bold.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Bold.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-BoldItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-BoldItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Book.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Book.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-BookItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-BookItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Heavy.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Heavy.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-HeavyItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-HeavyItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Light.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Light.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-LightItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-LightItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Medium.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Medium.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-MediumItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-MediumItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Semibold.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Semibold.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-SemiboldItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-SemiboldItalic.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-Thin.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-Thin.otf') format('truetype');
 }
 
 @fontface {
     font-family:'Cooper Hewitt';
-    src: url('../fonts/CooperHewitt-ThinItalic.otf') format('truetype');
+    src: url('../lib/ionic/fonts/CooperHewitt-ThinItalic.otf') format('truetype');
 }
 
 
