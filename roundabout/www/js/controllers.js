@@ -144,67 +144,6 @@ angular.module('starter.controllers', ['ionic'])
     }
 })
 
-/*
-.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
-
-    $scope.init = function() {
-        var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
-
-        var mapOptions = {
-          center: myLatlng,
-          zoom: 16,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map"),
-            mapOptions);
-
-        //Marker + infowindow + angularjs compiled ng-click
-        var contentString = "<div><a ng-click='clickTest()'>Click me!</a></div>";
-        var compiled = $compile(contentString)($scope);
-
-        var infowindow = new google.maps.InfoWindow({
-          content: compiled[0]
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: 'Uluru (Ayers Rock)'
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-        });
-
-        $scope.map = map;
-    };
-
-    // google.maps.event.addDomListener(window, 'load', initialize);
-
-    $scope.centerOnMe = function() {
-        if(!$scope.map) {
-            return;
-        }
-
-        $scope.loading = $ionicLoading.show({
-          content: 'Getting current location...',
-          showBackdrop: false
-        });
-
-        navigator.geolocation.getCurrentPosition(function(pos) {
-          $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-          $scope.loading.hide();
-        }, function(error) {
-          alert('Unable to get location: ' + error.message);
-        });
-    };
-
-    $scope.clickTest = function() {
-        alert('Example of infowindow with ng-click')
-    };
-})
-*/
-
 .controller('MapCtrl', function($scope, $ionicLoading) {
   $scope.mapCreated = function(map) {
     $scope.map = map;
@@ -232,42 +171,32 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 .controller('RideboardCtrl', function($scope, $timeout, $ionicScrollDelegate) {
-    $scope.rides = [
-        {
-            firstName:"Richard",
-            rank: [1,2,3,4,5],
-            age: "21",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Driver",
-            price: "$5"            
-        },
-        {
-            firstName:"Sara",
+    $scope.rides = [			
+			{
+            firstName:"John",
             rank: [1,2,3,4,5],
             age: "25",
             dateStamp: "3-25-2015",
             timeStamp: "4:00pm",
             pointA: "Cedar City, UT",
             pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Passenger",
-            price: "$5"
+            rideDescription: "I want to visit my long-distance girlfriend.",
+            rideType: "Driver",
+            price: "$5",
+						img: "/img/profilepics/John.jpg"
         },
         {
-            firstName:"John",
+            firstName:"Karl",
             rank: [1,2,3,4,5],
-            age: "28",
-            dateStamp: "3-25-2015",
+            age: "25",
+            dateStamp: "3-27-2015",
             timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
+            pointA: "St George, UT",
             pointB: "Salt Lake City, UT",
-            rideDescription: "I heard there's a Lynyrd Skynyrd concert!",
-            rideType: "Owner",
-            price: "$5"
+            rideDescription: "I have friends at the U.",
+            rideType: "Passenger",
+            price: "$5",
+						img: "/img/profilepics/Karl.jpg"
         }
     ];
     
@@ -275,26 +204,41 @@ angular.module('starter.controllers', ['ionic'])
         {
             firstName:"Joan",
             rank: [1,2,3,4,5],
-            age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
+            age: "23",
+            dateStamp: "3-27-2015",
+            timeStamp: "3:00pm",
             pointA: "Salt Lake City, UT",
             pointB: "Cedar City, UT",
-            rideDescription: "I want to visit my long-distance boyfriend.",
+            rideDescription: "Surprising my long-distance boyfriend!",
             rideType: "Driver",
-            price: "$5"            
+            price: "$5",
+						img: "/img/profilepics/Joan.jpg"
         },
         {
-            firstName:"Sara",
+            firstName:"Paul",
             rank: [1,2,3,4,5],
-            age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
-            pointA: "Salt Lake City, UT",
-            pointB: "Cedar City, UT",
-            rideDescription: "I have friends at SUU.",
+            age: "27",
+            dateStamp: "3-27-2015",
+            timeStamp: "3:15pm",
+            pointA: "Cedar City, UT",
+            pointB: "Tooele, UT",
+            rideDescription: "I heard there's a Skrillix concert!",
             rideType: "Passenger",
-            price: "$5"
+            price: "$5",
+						img: "/img/profilepics/Paul.jpg"
+        },
+        {
+            firstName:"Doug",
+            rank: [1,2,3,4,5],
+            age: "21",
+            dateStamp: "3-27-2015",
+            timeStamp: "3:10pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "Visiting family!",
+            rideType: "Owner",
+            price: "$5",
+						img: "/img/profilepics/Doug.jpg"
         }
     ];
     
@@ -303,8 +247,8 @@ angular.module('starter.controllers', ['ionic'])
             firstName:"Me",
             rank: [1,2,3,4,5],
             age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
+            dateStamp: "3-27-2015",
+            timeStamp: "3:00pm",
             pointA: "Cedar City, UT",
             pointB: "Orem, UT",
             rideDescription: "Visiting my UVU friends.",

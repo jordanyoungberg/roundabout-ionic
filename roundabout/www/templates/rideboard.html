@@ -29,7 +29,7 @@
                ng-click="toggleRide(ride)" 
                ng-class="{active:
                isRideShown(ride)}">
-            <img src="http://lorempixel.com/200/200/people/">
+            <img src="{{ride.img}}">
             <h2>{{ride.firstName}}, {{ride.age}}</h2><i class="ion-star" ng-repeat="n in ride.rank"></i>
             <h5>{{ride.dateStamp}} | {{ride.timeStamp}}</h5>
             <p>{{ride.pointA}} > {{ride.pointB}}</p>
@@ -78,7 +78,7 @@
           <a class="item item-energized item-avatar item-icon-right" ng-click="toggleRide(passenger)" 
                 ng-class="{active:
                 isRideShown(passenger)}">
-            <img src="http://lorempixel.com/200/200/people/">
+            <img src="{{passenger.img}}">
             <h2>{{passenger.firstName}}, {{passenger.age}}</h2><i class="ion-star" ng-repeat="n in passenger.rank"></i>
             <h5>{{passenger.dateStamp}} | {{passenger.timeStamp}}</h5>
             <p>{{passenger.pointA}} > {{passenger.pointB}}</p>
