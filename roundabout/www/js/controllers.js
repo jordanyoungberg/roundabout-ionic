@@ -183,7 +183,7 @@ angular.module('starter.controllers', ['ionic'])
             rideDescription: "I want to visit my long-distance girlfriend.",
             rideType: "Driver",
             price: "$5",
-						img: "/img/profilepics/John.jpg"
+						img: "img/profilepics/John.jpg"
         },
         {
             firstName:"Karl",
@@ -196,7 +196,7 @@ angular.module('starter.controllers', ['ionic'])
             rideDescription: "I have friends at the U.",
             rideType: "Passenger",
             price: "$5",
-						img: "/img/profilepics/Karl.jpg"
+						img: "img/profilepics/Karl.jpg"
         }
     ];
     
@@ -212,7 +212,7 @@ angular.module('starter.controllers', ['ionic'])
             rideDescription: "Surprising my long-distance boyfriend!",
             rideType: "Driver",
             price: "$5",
-						img: "/img/profilepics/Joan.jpg"
+						img: "img/profilepics/Joan.jpg"
         },
         {
             firstName:"Paul",
@@ -225,7 +225,7 @@ angular.module('starter.controllers', ['ionic'])
             rideDescription: "I heard there's a Skrillix concert!",
             rideType: "Passenger",
             price: "$5",
-						img: "/img/profilepics/Paul.jpg"
+						img: "img/profilepics/Paul.jpg"
         },
         {
             firstName:"Doug",
@@ -238,7 +238,7 @@ angular.module('starter.controllers', ['ionic'])
             rideDescription: "Visiting family!",
             rideType: "Owner",
             price: "$5",
-						img: "/img/profilepics/Doug.jpg"
+						img: "img/profilepics/Doug.jpg"
         }
     ];
     
