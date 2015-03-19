@@ -172,19 +172,6 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('RideboardCtrl', function($scope, $timeout, $ionicScrollDelegate) {
     $scope.rides = [			
-			{
-            firstName:"John",
-            rank: [1,2,3,4,5],
-            age: "25",
-            dateStamp: "3-25-2015",
-            timeStamp: "4:00pm",
-            pointA: "Cedar City, UT",
-            pointB: "Salt Lake City, UT",
-            rideDescription: "I want to visit my long-distance girlfriend.",
-            rideType: "Driver",
-            price: "$5",
-						img: "img/profilepics/John.jpg"
-        },
         {
             firstName:"Karl",
             rank: [1,2,3,4,5],
@@ -201,6 +188,19 @@ angular.module('starter.controllers', ['ionic'])
     ];
     
     $scope.passengers = [
+        {
+            firstName:"Sarah",
+            rank: [1,2,3,4,5],
+            age: "25",
+            dateStamp: "3-25-2015",
+            timeStamp: "4:00pm",
+            pointA: "Cedar City, UT",
+            pointB: "Salt Lake City, UT",
+            rideDescription: "I want to see the whales of the Great Salt Lake!",
+            rideType: "Driver",
+            price: "$5",
+						img: "img/profilepics/Sarah.jpg"
+        },
         {
             firstName:"Joan",
             rank: [1,2,3,4,5],

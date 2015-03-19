@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/korean/Documents/repos/roundabout-ionic/roundabout/platforms/ios/build/emulator/roundabout.app/www/lib/ionic/js/ionic.min.js"
+    ]
+}
